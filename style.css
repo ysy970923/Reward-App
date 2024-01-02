@@ -28,6 +28,7 @@ body, html {
 #points {
     font-size: 3em;
     color: #333;
+    z-index: 1; /* Ensure the number appears above the SVG */
 }
 
 #points-label {
@@ -35,6 +36,18 @@ body, html {
     bottom: 10px;
     font-size: 1em;
     color: #666;
+    z-index: 1; /* Ensure the label appears above the SVG */
+}
+
+.progress-ring {
+    position: absolute;
+    z-index: 0; /* Sit behind the points text */
+}
+
+.progress-ring__circle {
+    transition: stroke-dashoffset 0.35s;
+    transform: rotate(-90deg);
+    transform-origin: 50% 50%;
 }
 
 #missions, #user-state {

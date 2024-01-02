@@ -1,11 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Reward App</title>
     <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
     <nav id="top-nav">
         <p>실버 리워드 앱</p>
@@ -13,7 +15,13 @@
     <div id="app">
         <div id="points-circle">
             <div id="points">-</div>
+            <div>/100</div>
             <div id="points-label">포인트</div>
+            <!-- Circular progress bar -->
+            <svg class="progress-ring" width="200" height="200">
+                <circle class="progress-ring__circle" stroke="green" stroke-width="5" fill="transparent" r="90" cx="100"
+                    cy="100" />
+            </svg>
         </div>
         <div id="user-state">
             <div class="mission">
@@ -30,4 +38,5 @@
     </div>
     <script src="script.js"></script>
 </body>
+
 </html>

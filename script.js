@@ -16,6 +16,7 @@ if (!localStorage.getItem('n-cleared-missions')) {
 // Load points into the DOM
 const pointsContainer = document.getElementById('points');
 pointsContainer.innerHTML = localStorage.getItem('points');
+updateProgress(localStorage.getItem('points'), 100);
 
 // Load number of cleared missions into the DOM
 const nClearedMissionsContainer = document.getElementById('n-cleared-missions');
@@ -36,3 +37,15 @@ missions.forEach(mission => {
     });
     missionsContainer.appendChild(missionElement);
 });
+
+function updateProgress(points, maxPoints) {
+    const circle = document.querySelector('.progress-ring__circle');
+    const radius = circle.r.baseVal.value;
+    const circumference = radius * 2 * Math.PI;
+  
+    circle.style.strokeDasharray = `${circumference} ${circumference}`;
+    circle.style.strokeDashoffset = circumference;
+  
+    const offset = circumference - points / maxPoints * circumference;
+    circle.style.strokeDashoffset = offset;
+}
