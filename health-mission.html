@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Health Mission</title>
+    <link rel="stylesheet" href="health-mission.css">
+</head>
+
+<body>
+    <nav id="top-nav">
+        <a href="index.html">Back</a>
+        <p>미션! 동영상의 자세를 따라하세요</p>
+        <a href="reward-app.html">Next</a>
+    </nav>
+    <div id="app">
+        <!-- Upper screen: Video Tutorial -->
+        <div id="video-tutorial">
+            <video id="pose-video" controls autoplay
+                <source src="video.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+        </div>
+
+        <!-- Lower screen: Webcam Stream -->
+        <div id="webcam-stream">
+            <video id="webcam-video" autoplay></video>
+        </div>
+
+        <!-- Reward Message and Next Button (hidden by default) -->
+        <div id="reward-message" class="hidden">
+            <p>Congratulations! You've earned points!</p>
+            <button id="next-button">Next Mission</button>
+        </div>
+    </div>
+    <script src="health-mission.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,76 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: 'Arial', sans-serif;
+    background-color: #f4f4f4;
+    text-align: center;
+}
+
+#app {
+    max-width: 600px;
+    margin: auto;
+}
+
+#points-circle {
+    margin: 20px auto;
+    width: 200px;
+    height: 200px;
+    background-color: #fff;
+    border-radius: 50%;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    position: relative;
+}
+
+#points {
+    font-size: 3em;
+    color: #333;
+}
+
+#points-label {
+    position: absolute;
+    bottom: 10px;
+    font-size: 1em;
+    color: #666;
+}
+
+#missions, #user-state {
+    display: flex;
+    justify-content: space-around;
+    padding: 40px 20px;
+}
+
+.mission {
+    width: 130px;
+    height: 80px;
+    background-color: #fff;
+    margin-top: -40px; /* Half of the height to overlap */
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 10px;
+}
+
+.mission-points {
+    font-size: 1.5em;
+    color: #4CAF50;
+}
+
+.mission-label {
+    font-size: 0.9em;
+    color: #666;
+}
+
+/* General styles for navigation bars */
+nav {
+    display: flex;
+    justify-content: space-around; /* Distributes the navigation items evenly */
+    align-items: center;
+    background-color: #333; /* Example color */
+    color: white;
+}

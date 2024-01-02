@@ -1,0 +1,62 @@
+/* health-mission.css */
+
+/* Resetting default margins and padding */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body, html {
+    height: 100%;
+    margin: 0;
+}
+
+#app {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+/* Ensuring both the video tutorial and webcam stream take up exactly half of the #app container */
+#video-tutorial, #webcam-stream {
+    flex: 1; /* Flex value 1 ensures they share space equally */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden; /* Ensuring no content spills out */
+}
+
+video {
+    width: 100%; /* Adjust width or height as necessary, but ensure it doesn't exceed the container */
+    max-height: 100%; /* This ensures the video doesn't overflow its half of the screen */
+    object-fit: contain; /* Adjust as needed to maintain aspect ratio without cropping */
+}
+
+/* Styling for the reward message and next button */
+#reward-message {
+    position: absolute;
+    width: 100%;
+    bottom: 10px;
+    text-align: center;
+}
+
+.hidden {
+    display: none;
+}
+
+#next-button {
+    padding: 10px 20px;
+    font-size: 1rem;
+    cursor: pointer;
+}
+
+/* General styles for navigation bars */
+nav {
+    display: flex;
+    justify-content: space-around; /* Distributes the navigation items evenly */
+    align-items: center;
+    padding: 10px 0;
+    background-color: #333; /* Example color */
+    color: white;
+}
