@@ -1,7 +1,7 @@
 // Example missions data
 const missions = [
-    { id: 1, title: '자세 잡기!', points: 10 },
-    { id: 2, title: '사칙 연산!', points: 10 }
+    { id: 1, title: '스트레칭!', points: 10, url: 'health-mission.html' },
+    { id: 2, title: '사칙 연산!', points: 10, url: 'math-mission.html' },
 ];
 
 // if it's the first time the user is visiting the site, save the points to local storage
@@ -32,7 +32,7 @@ missions.forEach(mission => {
     `;
     missionElement.addEventListener('click', () => {
         // Logic to go to the mission page
-        window.location.href = 'health-mission.html';
+        window.location.href = mission.url;
     });
     missionsContainer.appendChild(missionElement);
 });
