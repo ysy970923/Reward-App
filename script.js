@@ -37,10 +37,10 @@ function loadMissions() {
     // if it's the first time the user is visiting the site, save missions to local storage
     if (!localStorage.getItem('missions')) {
         var all_missions = [
-            { id: 1, title: '스트레칭!', points: 10, url: 'health-mission', finished: false },
-            { id: 2, title: '사칙 연산!', points: 10, url: 'math-mission', finished: false },
-            { id: 3, title: '글 쓰기', points: 10, url: 'writing-mission', finished: false },
-            { id: 4, title: '단어 완성하기', points: 10, url: 'word-fill-mission', finished: false},
+            { id: 1, title: '스트레칭!', points: 10, url: 'health-mission/', finished: false },
+            { id: 2, title: '사칙 연산!', points: 10, url: 'math-mission/', finished: false },
+            { id: 3, title: '글 쓰기', points: 10, url: 'writing-mission/', finished: false },
+            { id: 4, title: '단어 완성하기', points: 10, url: 'word-fill-mission/', finished: false},
         ];
         localStorage.setItem('missions', JSON.stringify(all_missions));
 
