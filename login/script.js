@@ -15,3 +15,11 @@ document.getElementById('loginForm').addEventListener('submit', function(event){
         // Show error or validation message
     }
 });
+
+// remove user state from local storage
+localStorage.removeItem('username');
+localStorage.removeItem('missions');
+localStorage.removeItem('missions-to-solve');
+localStorage.removeItem('points');
+localStorage.removeItem('n-cleared-missions');
+
