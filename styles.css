@@ -54,13 +54,16 @@ body, html {
     display: flex;
     justify-content: space-around;
     padding: 40px 20px;
+    display: grid;
+    grid-template-rows: auto auto;
+    grid-template-columns: repeat(2, auto);
+    gap: 10px;
 }
 
 .mission {
     width: 130px;
     height: 80px;
     background-color: #fff;
-    margin-top: -40px; /* Half of the height to overlap */
     box-shadow: 0 0 10px rgba(0,0,0,0.1);
     display: flex;
     align-items: center;
@@ -77,6 +80,14 @@ body, html {
 .mission-label {
     font-size: 0.9em;
     color: #666;
+}
+
+.border-bottom {
+    border-bottom: 1px solid #ccc;
+}
+
+.border-top {
+    border-top: 1px solid #ccc;
 }
 
 /* General styles for navigation bars */

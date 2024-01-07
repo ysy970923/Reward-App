@@ -1,0 +1,43 @@
+body {
+    /* display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; */
+    
+    margin: 0;
+    padding: 0;
+    font-family: 'Arial', sans-serif;
+    background-color: #f4f4f4;
+    text-align: center;
+}
+
+#app {
+    max-width: 600px;
+    margin: auto;
+}
+
+#loginForm {
+    display: flex;
+    flex-direction: column;
+}
+
+input {
+    margin: 10px 0;
+    padding: 10px;
+}
+
+button {
+    padding: 10px;
+    background-color: blue;
+    color: white;
+    border: none;
+}
+
+/* General styles for navigation bars */
+nav {
+    display: flex;
+    justify-content: space-around; /* Distributes the navigation items evenly */
+    align-items: center;
+    background-color: #333; /* Example color */
+    color: white;
+}

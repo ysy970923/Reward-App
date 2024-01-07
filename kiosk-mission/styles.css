@@ -1,0 +1,106 @@
+body, html {
+    height: 100%;
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+#top-nav {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 10px;
+}
+
+#kiosk-screen {
+    width: 100%;
+    background-color: #f7f7f7;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+#menu-items {
+    display: flex;
+    flex-direction: column;
+    margin: 10px;
+    padding: 10px;
+}
+
+.menu-section {
+    border: 1px solid #ddd;
+    margin-bottom: 20px;
+    padding: 10px;
+    border-radius: 10px; /* Rounded corners */
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1); /* Subtle shadow for depth */
+}
+
+.menu-section h2 {
+    text-align: center;
+    color: #333;
+}
+
+.items div {
+    padding: 5px 10px;
+    margin: 5px 0;
+    border-bottom: 1px solid #eee; /* Separator for items */
+    cursor: pointer; /* Make items feel clickable */
+}
+
+.items div:last-child {
+    border-bottom: none; /* No separator for the last item */
+}
+
+.items div:hover {
+    background-color: #f8f8f8; /* Slight hover effect */
+}
+
+#order-summary {
+    border: 1px solid #ddd;
+    margin: 10px;
+    padding: 20px;
+    width: 300px; /* or whatever size you prefer */
+    height: 400px; /* or whatever size you prefer */
+    overflow-y: auto; /* for scrolling if content is too long */
+}
+
+#submit-order {
+    padding: 10px 20px;
+    font-size: 1em;
+    cursor: pointer;
+}
+
+#category-menu {
+    display: flex;
+    justify-content: center;
+    background-color: #f0f0f0;
+    padding: 10px 0;
+    cursor: pointer;
+    border-bottom: 2px solid #ddd;
+}
+
+.category {
+    margin: 0 20px;
+    padding: 5px 10px;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+.category:hover {
+    background-color: #e0e0e0;
+}
+
+#item-display {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* Adjust number for more or fewer columns */
+    gap: 10px;
+    padding: 20px;
+    text-align: center;
+}
+
+.grid-item {
+    border: 1px solid #ddd;
+    padding: 20px;
+    border-radius: 5px; /* Slight rounded corners for aesthetics */
+}
+

@@ -1,5 +1,13 @@
+redirectIfNotLoggedIn();
+
 loadPoints();
 loadMissions();
+
+function redirectIfNotLoggedIn() {
+    if (!localStorage.getItem('username')) {
+        window.location.href = '../login/';
+    }
+}
 
 function updateProgress(points, maxPoints) {
     const circle = document.querySelector('.progress-ring__circle');
@@ -40,11 +48,14 @@ function loadMissions() {
             { id: 1, title: '스트레칭!', points: 10, url: 'health-mission', finished: false },
             { id: 2, title: '사칙 연산!', points: 10, url: 'math-mission', finished: false },
             { id: 3, title: '글 쓰기', points: 10, url: 'writing-mission', finished: false },
-            { id: 4, title: '단어 완성하기', points: 10, url: 'word-fill-mission', finished: false},
+            { id: 4, title: '단어 완성하기', points: 10, url: 'word-fill-mission', finished: false },
+            { id: 5, title: '밝기 구별하기', points: 10, url: 'brightness-mission', finished: false },
+            { id: 6, title: '키오스크 주문하기', points: 10, url: 'kiosk-mission', finished: false },
         ];
         localStorage.setItem('missions', JSON.stringify(all_missions));
 
-        localStorage.setItem('missions-to-solve', JSON.stringify([1, 2]));
+        // initially set all missions to solve
+        localStorage.setItem('missions-to-solve', JSON.stringify(Array.from(Array(all_missions.length), (_, i) => i + 1)));
     }
 
     // if mission in missions-to-solve is finished, remove it from missions-to-solve, add a new mission to missions-to-solve
@@ -57,18 +68,14 @@ function loadMissions() {
         }
     });
 
-    if (missionsToSolve.length < 2) {
-        var max_count = 4;
-        var new_mission_id = Math.floor(Math.random() * 4) + 1;
-        while (missionsToSolve.includes(new_mission_id) || missions[new_mission_id - 1].finished) {
-            new_mission_id = Math.floor(Math.random() * 4) + 1;
-            max_count -= 1;
-            if (max_count === 0) {
-                break;
-            }
-        }
-        missionsToSolve.push(new_mission_id);
-        missions[new_mission_id - 1].finished = false;
+    if (missionsToSolve.length == 0) {
+        alert("모든 미션을 완료했습니다! 축하합니다!");
+        alert("다시 시작합니다!");
+        missionsToSolve = Array.from(Array(missions.length), (_, i) => i + 1);
+        // reset missions
+        missions.forEach(mission => {
+            mission.finished = false;
+        });
     }
 
     localStorage.setItem('missions', JSON.stringify(missions));
@@ -95,5 +102,6 @@ function showMission(mission) {
         // Logic to go to the mission page
         window.location.href = mission.url + '/';
     });
+
     missionsContainer.appendChild(missionElement);
 }

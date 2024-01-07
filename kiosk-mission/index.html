@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Math Mission</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <nav id="top-nav">
+        <a href="../">Back</a> <!-- Link back to home or other relevant pages -->
+        <span>키오스크 주문하기!</span> <!-- Title of the page -->
+    </nav>
+    <div style="text-align: center;">
+        <h3 id="mission-problem"></h2>
+    </div>
+    <div id="kiosk-screen">
+        <!-- Top Row for Category Selection -->
+        <div id="category-menu">
+            <span class="category" data-category="coffee">Coffee</span>
+            <span class="category" data-category="tea">Tea</span>
+            <span class="category" data-category="others">Others</span>
+        </div>
+        <!-- Content Area for Displaying Items -->
+        <div id="item-display" class="grid"></div>
+
+        <div id="order-summary">
+            <!-- Section for the order summary -->
+            <!-- Update this area dynamically as items are selected -->
+        </div>
+        <button id="submit-button">주문하기</button>
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,35 @@
+#brightness-grid {
+    padding: 40px 0px;
+    width: 90%; /* Adjust width as necessary */
+    height: auto; /* Adjust height as necessary */
+    margin: auto;
+    text-align: center; /* Center the blocks */
+    font-size: 0; /* Remove space between inline-block elements */
+}
+
+#brightness-grid div {
+    width: 30%; /* 100% divided by 3, for 3 blocks per row */
+    padding-bottom: 30%; /* Same as width to make square */
+    display: inline-block; /* Align in grid */
+    vertical-align: top; /* Align inline-block elements */
+    cursor: pointer; /* Change cursor on hover */
+    transition: background-color 0.3s; /* Smooth transition for visual effect */
+    margin: 0%;
+    position: relative;
+}
+
+.fas.fa-check {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); /* Center the checkmark */
+    font-size: 2rem; /* Adjust size */
+    color: green; /* Adjust color */
+}
+
+nav#top-nav {
+    background: #333;
+    color: white;
+    padding: 10px;
+    text-align: center;
+}

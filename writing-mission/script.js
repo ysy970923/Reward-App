@@ -9,11 +9,6 @@ const writing_topics = [
         id: 2,
         topic: "Space exploration and its benefits",
     },
-    {
-        id: 3,
-        topic: "Adventures of childhood",
-    },
-    // Add more topics as necessary
 ];
 
 var n_left = writing_topics.length;
